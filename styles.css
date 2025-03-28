@@ -1,0 +1,304 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* color: white; */
+    /* background-color: black; */
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Keeps space between left & right */
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    position: relative; /* Needed for absolute positioning */
+}
+
+.nav-left {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-left .logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #050505;
+}
+
+.nav-center a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.nav-right img {
+    width: 20px;
+    margin-left: 15px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('https://s3-alpha-sig.figma.com/img/154e/382f/b7e8be84d7248b8b9812172cad1cd0c9?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VrQpLdqdBc9D20yVpDmm6hZig6pItB6CdOVP-HrjnDoRf2ri2DP3yJi9KqI-aMaS6RC6ZFZqGPX7~jHBPb~qMoRSPQJOPMkHp86034eK8V~LSaC8JFkImyECyM9TMc8qZaRNbMb5Yh3qBwZz7Sxt3xVQir1J7cAczxTIxk8ZhW36he7ABUT7cUAnZmoCCqjPjqCZ3HrO05SUnflPUPwAJiglM0lH5dEDuF91zviiWlPqVQ31RKLbn88sk8jRtxNtNIMbttt2ACaU~aMAtfkcbw9KTrayUI1hZXTAXJq12GXPdULPuqUDSigyGPEixAQAxCXwJBuq2sicO153zQUR9w__') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-content {
+    max-width: 500px;
+    text-align: left;
+
+}
+.hero-content img {
+        margin: -2px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color:#fefdfd
+}
+
+.hero p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color:#fefdfd
+
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e6005c;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* // new section  //*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+/* Center the search bar container */
+.search-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 10vh; /* Adjust height as needed */
+}
+
+/* Search bar styling */
+.search {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Adjust width as needed */
+}
+
+/* Input field styling */
+#searchInput {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Search button inside input field, aligned to the end */
+.search button {
+    position: absolute;
+    right: 10px; /* Move button to the far right */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #777;
+    font-size: 18px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button hover effect */
+.search button:hover {
+    color: #000;
+}
+
+/* Adjust the search icon */
+.search button i {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+.section1{
+    margin-top: 40px;
+}
+input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.image-card {
+    position: relative;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-card img {
+    width: 100%;
+    height: auto;
+}
+.image-info {
+    padding: 10px;
+    text-align: center;
+}
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.wishlist-btn i {
+    color: gray;
+    font-size: 18px;
+}
+.wishlist-btn.active i {
+    color: red;
+}
+h2 {
+    text-align: left;
+    margin-left: 20px;
+}
+/* Filter Button Styling */
+.filter-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background: #0056b3;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: 0; /* Align with Favorites section */
+}
+/* Featured Image Section */
+#featured {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+    background: #ffffff;
+}
+#featured img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+#featured .image-info {
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style for Similar Products Splide */
+#results-splide {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.splide__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.splide__slide img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.splide__arrow {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.featured-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.explore-btn {
+    background-color: #BE123C;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.explore-btn:hover {
+    background-color: darkred;
+}
+
+@media (max-width: 768px) {
+    .nav-left {
+        display: none;
+    }
+}
