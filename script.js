@@ -49,7 +49,7 @@ function displayFeaturedImage(image) {
     featuredContainer.innerHTML = `
         <div class="featured-wrapper">
             <div class="image-card">
-                <img src="${image.src.medium}" alt="${image.alt}">
+                <img src="${image.src.medium}" alt="${image.alt}" class="fixed-image">
                 <div class="image-info">${image.photographer}</div>
                 <button class="wishlist-btn" onclick="toggleFavorite(this, '${image.src.medium}', '${image.alt}', '${image.photographer}')">
                     <i class="fa fa-heart"></i>
@@ -69,7 +69,7 @@ function displayResults(images) {
         card.className = "splide__slide image-card";
 
         card.innerHTML = `
-            <img src="${photo.src.medium}" alt="${photo.alt}">
+            <img src="${photo.src.medium}" alt="${photo.alt}" class="fixed-image">
             <div class="image-info">${photo.photographer}</div>
             <button class="wishlist-btn" onclick="toggleFavorite(this, '${photo.src.medium}', '${photo.alt}', '${photo.photographer}')">
                 <i class="fa fa-heart"></i>
@@ -80,11 +80,12 @@ function displayResults(images) {
 
     new Splide('#results-splide', {
         type: 'slide',
-        perPage: 3,
+        perPage: 5,
         gap: '10px',
         arrows: true,
         pagination: false,
         breakpoints: {
+            1024: { perPage: 3 },
             768: { perPage: 2 },
             480: { perPage: 1 }
         }
@@ -106,26 +107,22 @@ function toggleFavorite(button, imageUrl, altText, photographer) {
 
 // Function to add an image to favorites
 function addToFavorites(imageUrl, altText, photographer) {
-    // Check if the image already exists in favorites
-    const existingFavorites = favoritesContainer.querySelectorAll("img");
-    for (let img of existingFavorites) {
-        if (img.src === imageUrl) return;
-    }
-
     const favCard = document.createElement("div");
     favCard.className = "image-card";
 
     favCard.innerHTML = `
-        <img src="${imageUrl}" alt="${altText}">
+        <img src="${imageUrl}" alt="${altText}" class="fixed-image">
         <div class="image-info">${photographer}</div>
-        <button class="remove-btn" onclick="removeFromFavorites('${imageUrl}')">❌</button>
+        <button class="wishlist-btn active" onclick="removeFromFavorites('${imageUrl}', this)">
+            <i class="fa fa-heart"></i>
+        </button>
     `;
 
     favoritesContainer.appendChild(favCard);
 }
 
 // Function to remove an image from favorites
-function removeFromFavorites(imageUrl) {
+function removeFromFavorites(imageUrl, button) {
     const favoriteCards = favoritesContainer.querySelectorAll(".image-card");
 
     favoriteCards.forEach(card => {
